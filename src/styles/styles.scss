@@ -1,10 +1,19 @@
+:root {
+  --seafog: #b2a7b6;
+  --periwinkle: #ccccfb;
+  --blush: #c8ada3;
+  --treshaute: #dee18c;
+  --white: white;
+}
+
 html {
-  font-family: sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+  background-color: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -185,7 +194,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 112.5%/1.45em Helvetica, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -200,7 +209,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
