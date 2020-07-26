@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Bitsii`,
     description: `Helsinki-based production duo Biitsi`,
-    author: `@usrrname`,
+    author: `Jen Chan`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
