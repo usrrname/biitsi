@@ -1,8 +1,8 @@
 import React from "react"
-
+import "../styles/footer.module.scss"
 const Footer = props => {
   return (
-    <footer>
+    <footer class="footer">
       <sub>
         Built with
         {` `}
@@ -13,7 +13,10 @@ const Footer = props => {
         <a href="https://www.netlifycms.org" target="_blank" rel="noreferrer">
           Netlify
         </a>
-        . Site by {props.author}
+        . Site by{" "}
+        <a href="https://jenchan.biz" target="_blank" rel="noreferrer">
+          {props.author}
+        </a>
       </sub>
     </footer>
   )
