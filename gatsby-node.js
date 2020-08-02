@@ -1,41 +1,8 @@
-require("dotenv").config({ path: ".env" })
-const cloudinary = require("cloudinary").v2
-const snakeCase = require("lodash.snakecase")
-
-const newCloudinary = options => {
-  cloudinary.config({
-    cloud_name: options.cloud_name,
-    api_key: options.api_key,
-    api_secret: options.api_secret,
-  })
-  return cloudinary
-}
-
-const DEFAULT_KEYS = [
-  "resourceType",
-  "prefix",
-  "tags",
-  "maxResults",
-  "type",
-  "context",
-]
-const DEFAULT_TYPE = "upload"
-
-const getResourceOptions = options => {
-  let result = {}
-
-  DEFAULT_KEYS.forEach(key => {
-    if (typeof options[key] !== "undefined") {
-      result[snakeCase(key)] = options[key]
-    }
-  })
-
-  result.type = result.type || DEFAULT_TYPE
-
-  return result
-}
-
-const type = `CloudinaryMedia`
+const {
+  newCloudinary,
+  getResourceOptions,
+} = require("./src/util/cloudinary_util")
+const type = `cloudinaryMedia`
 
 const getNodeData = (gatsby, media) => {
   return {
@@ -48,6 +15,16 @@ const getNodeData = (gatsby, media) => {
       contentDigest: gatsby.createContentDigest(media),
     },
   }
+}
+
+const addTransformations = (resource, transformation, secure) => {
+  const splitURL = secure
+    ? resource.secure_url.split("/")
+    : resource.url.split("/")
+  splitURL.splice(6, 0, transformation)
+
+  const transformedURL = splitURL.join("/")
+  return transformedURL
 }
 
 const createCloudinaryNodes = (gatsby, cloudinary, options) => {

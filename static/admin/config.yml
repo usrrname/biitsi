@@ -2,7 +2,6 @@ backend:
   name: github
   branch: main
   repo: usrrname/biitsi
-  site_domain: cms.netlify.com
   site_url: https://biitsi.org
 
 # global
@@ -32,36 +31,39 @@ collections:
         default: project
       - label: Title
         name: title
-      - label: Permalink
-        name: permalink
-        widget: string
-        required: false
       - label: Medium
         name: medium
         widget: string
+        required: false
       - label: Year
         name: year
         widget: datetime
         dateFormat: MM.YYYY
         format: L
-      - label: Exhibition or Venue
-        name: exhibition
-        widget: string
       - label: Curated by
         name: curator
         widget: string
+        required: false
+      - label: Exhibition/Venue
+        name: exhibition
+        widget: string
+        required: false
       - label: Description
         name: description
         widget: text
+        required: false
       - label: Body
         name: body
         widget: markdown
+        required: false
       - label: Tags
         name: tags
         widget: list
+        required: false
       - label: Featured Image
         name: thumbnail
         widget: image
+        required: false
 
   - name: pages
     label: Pages
@@ -71,9 +73,9 @@ collections:
         name: index
         create: true
         fields:
-          - label: Description
-            name: description
-            widget: markdown
+          - label: Template
+            name: template
+            widget: hidden
       - file: src/pages/press/index.md
         label: Press
         name: press
@@ -81,15 +83,15 @@ collections:
           - label: Title
             name: title
             widget: string
-          - label: Image
-            name: image
-            widget: image
           - label: Body
             name: body
             widget: markdown
           - label: File
             name: file
             widget: file
+          - label: Link
+            name: Link
+            widget: string
           - label: Tags
             name: tags
             widget: list

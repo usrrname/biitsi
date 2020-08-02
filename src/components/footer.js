@@ -2,7 +2,7 @@ import React from "react"
 import "../styles/footer.module.scss"
 const Footer = props => {
   return (
-    <footer class="footer">
+    <footer className="footer">
       <sub>
         Built with
         {` `}

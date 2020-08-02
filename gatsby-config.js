@@ -1,5 +1,6 @@
 // Load the environment variables.
-require("dotenv").config({ path: ".env" })
+const dotenv = require("dotenv")
+dotenv.config({ path: ".env" })
 
 module.exports = {
   siteMetadata: {
@@ -17,12 +18,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-netlify-cms",
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
@@ -36,6 +31,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-json`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-cloudinary`,
@@ -45,6 +41,12 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
         prefix: `bcloud/`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
     `gatsby-plugin-sass`,

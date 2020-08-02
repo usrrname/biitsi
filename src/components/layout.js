@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
       <div className={layoutStyles.container}>
         <main className={layoutStyles.content}>{children}</main>
       </div>
-      <Footer author={data.site.siteMetadata.author}/>
+      <Footer author={data.site.siteMetadata.author} />
     </>
   )
 }

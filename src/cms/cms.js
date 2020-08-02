@@ -2,7 +2,6 @@ import CMS from "netlify-cms-app"
 import cloudinary from "netlify-cms-media-library-cloudinary"
 
 CMS.registerMediaLibrary(cloudinary)
-CMS.registerWidget("relationKitchenSinkPost", "relation")
 CMS.registerEditorComponent({
   id: "youtube",
   label: "Youtube",
