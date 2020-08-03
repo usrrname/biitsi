@@ -19,19 +19,19 @@ collections:
   - name: projects
     label: Projects
     label_singular: "Project"
-    folder: _projects
+    folder: "src/pages/_projects"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: "projects/{{year}}/{{month}}/{{slug}}"
     path: "{{title}}/index"
     fields:
       - label: Template
-        name: template
+        name: templateKey
         widget: hidden
-        default: project
+        default: project-post
       - label: Title
         name: title
-      - label: Published on
+      - label: Updated On
         name: date
         widget: datetime
         dateFormat: MM.YYYY
@@ -39,10 +39,6 @@ collections:
         required: true
       - label: Description
         name: description
-        widget: text
-        required: false
-      - label: Body
-        name: body
         widget: markdown
         required: false
       - label: Tags
@@ -52,15 +48,25 @@ collections:
   - name: press
     label: Press
     label_singular: Press Article
-    folder: _press
+    folder: src/pages/_press
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: "_press/{{year}}/{{day}}/{{month}}"
     path: "{{title}}/index"
     fields:
+      - label: Template Key
+        name: templateKey
+        widget: hidden
+        default: press-post
       - label: Title
         name: title
         widget: string
+      - label: Updated On
+        name: date
+        widget: datetime
+        dateFormat: MM.YYYY
+        format: L
+        required: true
       - label: Description
         name: description
         widget: markdown
@@ -68,23 +74,13 @@ collections:
         name: file
         widget: file
         required: false
-      - label: Link
-        name: Link
-        widget: string
-        required: false
       - label: Tags
         name: tags
         widget: list
         required: false
-      - label: Author/Publication
-        name: author
-        widget: string
-        required: false
-      - label: Date
-        name: Date
-        widget: datetime
-        dateFormat: MM.DD.YYYY
-        format: L
+      - label: Year
+        name: year
+        widget: number
         required: false
 
   - name: pages
@@ -101,8 +97,14 @@ collections:
       - file: src/pages/press/index.md
         label: Press
         name: press
-        create: true
         fields:
-          - label: Title
-            name: title
-            widget: string
+          - label: Template
+            name: template
+            widget: hidden
+      - file: src/pages/tags/index.md
+        label: Tags
+        name: tags
+        fields:
+          - label: Template
+            name: template
+            widget: hidden

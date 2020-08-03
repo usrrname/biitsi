@@ -6,5 +6,5 @@ description: >
 
 
   Boel Ulfsdotter, [Göteborgs Posten](https://www.gp.se/kultur/kultur/s%C3%B6mmerskornas-historia-ljuder-p%C3%A5-n%C3%A4%C3%A4s-1.6942359)
-Date: 06/07/2018
+date: 06/07/2018
 ---

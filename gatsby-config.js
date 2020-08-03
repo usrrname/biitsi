@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-remark`,
+    `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -36,14 +37,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projects`,
-        path: `${__dirname}/_projects`,
+        path: `${__dirname}/src/pages/_projects/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `press`,
-        path: `${__dirname}/_press`,
+        path: `${__dirname}/src/pages/_press/`,
       },
     },
     {
