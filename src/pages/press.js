@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 const Press = () => (
   <Layout>
     <SEO title="Press" />
+    <p>Coming Soon</p>
   </Layout>
 )
 

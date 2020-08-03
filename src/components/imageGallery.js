@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/gallery.module.scss"
+import imageGalleryStyles from "./imageGallery.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
 const ImageGallery = () => {
   const data = useStaticQuery(graphql`
@@ -16,9 +16,12 @@ const ImageGallery = () => {
   const clImages = data.allCloudinaryMedia.edges
   return (
     <div>
-      <div className="image-grid">
+      <div className={imageGalleryStyles + `.image-grid`}>
         {clImages.map((image, index) => (
-          <div className="image-item" key={`${index}-cl`}>
+          <div
+            className={imageGalleryStyles + `.image-item`}
+            key={`${index}-cl`}
+          >
             <img src={image.node.secure_url} alt={"no alt :("} />
           </div>
         ))}
