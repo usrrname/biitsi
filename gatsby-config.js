@@ -12,6 +12,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
+    `gatsby-remark-relative-images`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -64,12 +65,12 @@ module.exports = {
         prefix: `bcloud/`,
       },
     },
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    `gatsby-plugin-sass`,
   ],
 }

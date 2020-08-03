@@ -84,16 +84,16 @@ PressPost.propTypes = {
 
 export default PressPost
 
-export const pageQuery = graphql`
+export const pressQuery = graphql`
   query PressPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
-        date
         title
         description
         tags
+        date
       }
     }
   }

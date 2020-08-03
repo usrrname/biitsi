@@ -14,7 +14,6 @@ import layoutStyles from "./layout.module.scss"
 import Footer from "./footer"
 import facebook from "../images/social/facebook.svg"
 import instagram from "../images/social/instagram.svg"
-import vimeo from "../images/social/vimeo.svg"
 import soundcloud from "../images/social/soundcloud.png"
 import Sidebar from "./sidebar"
 
@@ -52,9 +51,6 @@ const Layout = ({ children }) => {
             alt="facebook icon"
             className="social-media-icons"
           />
-        </a>
-        <a rel="noopener" href="" className="social-media-icons">
-          <img src={vimeo} width={25} alt="vimeo icon" />
         </a>
         <a rel="noopener" href="https://soundcloud.com/biitsi/tracks">
           <img

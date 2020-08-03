@@ -9,4 +9,5 @@ description: >-
   ![Semifinaali](https://res.cloudinary.com/bitsicloud/image/upload/v1596108035/bcloud/07A.jpg)
 tags:
   - MUSICAL PERFORMANCE
+year: 2017
 ---

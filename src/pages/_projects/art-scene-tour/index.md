@@ -1,7 +1,7 @@
 ---
-date: 12/01/2016
 template: project-post
 title: ART SCENE TOUR
+date: 12/01/2016
 description: >-
   ![Biitsi
   Winter](https://res.cloudinary.com/bitsicloud/image/upload/v1596108035/bcloud/01.jpg)

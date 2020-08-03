@@ -1,4 +1,5 @@
 ---
+template: press-post
 title: JUHA BIITSILLÄ
 description: >+
   ### “Sympaattiset kertomukset perheistä eivät ole kiillotettuja vaan eläviä ja
@@ -28,5 +29,5 @@ description: >+
 
   Mikko Elo, [Satakunnan kansa](https://www.satakunnankansa.fi/kulttuuri/lainsuojattomat-arvio-juha-biitsilla-vyoryy-haikailematta-paalle-mutta-on-silti-sympaattinen-kertoessaan-pojan-ja-isan-hankalasta-suhteesta-201170764) 5.9.2018
 
-Date: ""
+date: 01/15/2020
 ---

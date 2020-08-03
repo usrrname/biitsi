@@ -59,8 +59,8 @@ export default () => (
                 slug
               }
               frontmatter {
-                title
                 templateKey
+                title
                 date
               }
             }

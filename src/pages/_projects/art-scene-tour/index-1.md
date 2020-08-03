@@ -2,11 +2,12 @@
 template: project-post
 title: ART SCENE TOUR
 date: 01/01/2017
-description: >+
+description: >
   Mad House season launch party, Helsinki, 1/2017
 
   ![Thank you, Love Biitsi](https://res.cloudinary.com/bitsicloud/image/upload/v1596108034/bcloud/03.jpg)
 
 tags:
   - ART SCENE TOUR
+year: 2017
 ---

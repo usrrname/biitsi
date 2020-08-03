@@ -84,16 +84,17 @@ ProjectPost.propTypes = {
 
 export default ProjectPost
 
-export const pageQuery = graphql`
+export const projectQuery = graphql`
   query ProjectPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
-        date
         title
+        date
         description
         tags
+        year
       }
     }
   }

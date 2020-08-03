@@ -10,4 +10,5 @@ description: >
   photo by IDA LEHTONEN
 tags:
   - MUSICAL PERFORMANCE
+year: 2017
 ---

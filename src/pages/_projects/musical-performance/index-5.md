@@ -2,7 +2,7 @@
 template: project-post
 title: MUSICAL PERFORMANCE
 date: 08/03/2020
-description: >-
+description: >
   in an event titled AltArs17, curated by KOKIMO collective, Kiasma Museum of
   Contemporary Art, Helsinki, 10/2017
 
@@ -13,4 +13,5 @@ description: >-
   photo by IDA LEHTONEN
 tags:
   - MUSICAL PERFORMANCE
+year: 2017
 ---

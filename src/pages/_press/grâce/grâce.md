@@ -1,4 +1,5 @@
 ---
+template: press-post
 title: GRÂCE
 description: >
   ### “Impulsseja antavassa äänimaailmassa syntyy vapaata ja ilmavaa liikettä
@@ -24,5 +25,5 @@ description: >
 
 
   Jussi Tossavainen, [Helsingin Sanomat](https://www.hs.fi/kulttuuri/art-2000006407485.html?fbclid=IwAR3hFoURJ7fWV41Iu_yi4s06tvzQ0cqSVKIhSZjJb2jE6obPGzKa3lLCSo8) 14.2.2019
-Date: ""
+year: 2019
 ---

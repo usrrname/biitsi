@@ -26,10 +26,11 @@ export const Sidebar = ({ width, height, children }) => {
           paddingLeft: 16,
         }}
       >
-        <div onClick={() => toggleMenu()} className="toggle-menu">
+        <div role="button" onClick={() => toggleMenu()} className="toggle-menu">
           <img
             src={paperclip}
             width={35}
+            alt="paper clip"
             style={{
               transform: `translate(${width}px, 20vh)`,
             }}

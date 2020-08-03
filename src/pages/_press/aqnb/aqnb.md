@@ -1,4 +1,5 @@
 ---
+template: press-post
 title: AQNB
 description: >
   ## “'Biitsi's affectionate sampler for AQNB' (2017), A rock, nu-metal + cult
@@ -15,5 +16,4 @@ description: >
 
 
   Human Poney, [AQNB](https://www.aqnb.com/2017/09/18/letting-go-of-what-we-carry-entering-the-fog-in-video-premiere-of-biitsis-we-feel-this/) 18.9.2017
-date: ""
 ---

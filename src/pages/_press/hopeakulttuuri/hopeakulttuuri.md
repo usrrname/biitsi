@@ -1,4 +1,5 @@
 ---
+template: press-post
 title: HOPEAKULTTUURI
 description: >
   ### “Miten Suomen harmaantuminen vaikuttaa kulttuuritarjontaan, kysyy pätevä

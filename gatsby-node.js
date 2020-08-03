@@ -16,9 +16,9 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
-              title
               templateKey
+              title
+              tags
             }
           }
         }
@@ -33,7 +33,6 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach(edge => {
-      const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -42,7 +41,7 @@ exports.createPages = ({ actions, graphql }) => {
         ),
         // additional data can be passed via context
         context: {
-          id,
+          id: edge.node.id,
         },
       })
     })
@@ -66,7 +65,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: tagPath,
         component: path.resolve(`src/templates/tags.js`),
         context: {
-          tag,
+          tag: tag,
         },
       })
     })
@@ -87,6 +86,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
+// cloudinary img delivery
 const {
   newCloudinary,
   getResourceOptions,

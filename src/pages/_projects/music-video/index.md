@@ -6,4 +6,5 @@ description: |
   for Dxxxa D, Hzzzt feat. Minkki, ‘Le Courateur’, 2017
 
   {{< youtube eQw4t99v_9s >}}
+year: 2017
 ---

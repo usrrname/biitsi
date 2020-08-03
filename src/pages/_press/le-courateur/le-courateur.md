@@ -1,4 +1,5 @@
 ---
+template: press-post
 title: LE COURATEUR
 description: >
   ## “Video jolla Juha Sipilä haluaa tappaa Suomen Serge Gainsbourgin on oiva
@@ -15,6 +16,6 @@ description: >
 
   Dxxxa D:n kommentti,
 
-  [Viivi Laakkonen](https://www.ts.fi/uutiset/paikalliset/3393888/Dxxxa+D+tarjoilee+uutuutensa+turkulaisille++ensimmaisena+maailmassa), Turun Sanomat 14.2. 2017
-Date: ""
+  [Viivi Laakkonen](https://www.ts.fi/uutiset/paikalliset/3393888/Dxxxa+D+tarjoilee+uutuutensa+turkulaisille++ensimmaisena+maailmassa), Turun Sanomat 14.2.2017
+date: 02/14/2017
 ---
