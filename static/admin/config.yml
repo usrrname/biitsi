@@ -31,23 +31,12 @@ collections:
         default: project
       - label: Title
         name: title
-      - label: Medium
-        name: medium
-        widget: string
-        required: false
-      - label: Year
-        name: year
+      - label: Published on
+        name: date
         widget: datetime
         dateFormat: MM.YYYY
         format: L
-      - label: Curated by
-        name: curator
-        widget: string
-        required: false
-      - label: Exhibition/Venue
-        name: exhibition
-        widget: string
-        required: false
+        required: true
       - label: Description
         name: description
         widget: text
@@ -60,9 +49,42 @@ collections:
         name: tags
         widget: list
         required: false
-      - label: Featured Image
-        name: thumbnail
-        widget: image
+  - name: press
+    label: Press
+    label_singular: Press Article
+    folder: _press
+    create: true
+    slug: "{{slug}}"
+    preview_path: "_press/{{year}}/{{day}}/{{month}}"
+    path: "{{title}}/index"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: markdown
+      - label: File
+        name: file
+        widget: file
+        required: false
+      - label: Link
+        name: Link
+        widget: string
+        required: false
+      - label: Tags
+        name: tags
+        widget: list
+        required: false
+      - label: Author/Publication
+        name: author
+        widget: string
+        required: false
+      - label: Date
+        name: Date
+        widget: datetime
+        dateFormat: MM.DD.YYYY
+        format: L
         required: false
 
   - name: pages
@@ -79,19 +101,8 @@ collections:
       - file: src/pages/press/index.md
         label: Press
         name: press
+        create: true
         fields:
           - label: Title
             name: title
             widget: string
-          - label: Body
-            name: body
-            widget: markdown
-          - label: File
-            name: file
-            widget: file
-          - label: Link
-            name: Link
-            widget: string
-          - label: Tags
-            name: tags
-            widget: list

@@ -45,17 +45,17 @@ const Layout = ({ children }) => {
         >
           biitsiemail@gmail.com
         </a>
-        <a rel="noopener" href="https://www.facebook.com/biitsihelsinki/" className="social-media-icons">
-          <img src={facebook} width={25} alt="facebook icon" />
+        <a rel="noopener" href="https://www.facebook.com/biitsihelsinki/" >
+          <img src={facebook} width={25} alt="facebook icon" className="social-media-icons"/>
         </a>
         <a rel="noopener" href="" className="social-media-icons">
           <img src={vimeo} width={25} alt="vimeo icon" />
         </a>
-        <a rel="noopener" href="https://soundcloud.com/biitsi/tracks" className="social-media-icons">
-          <img src={soundcloud} width={25} alt="soundclound icon" />
+        <a rel="noopener" href="https://soundcloud.com/biitsi/tracks" >
+          <img src={soundcloud} width={25} alt="soundclound icon" className="social-media-icons"/>
         </a>
-        <a rel="noopener" href="https://www.instagram.com/biitsiband/" className="social-media-icons">
-          <img src={instagram} width={25} alt="instagram icon" />
+        <a rel="noopener" href="https://www.instagram.com/biitsiband/" >
+          <img src={instagram} width={25} alt="instagram icon" className="social-media-icons"/>
         </a>
       </Sidebar>
       <div className={layoutStyles.container}>

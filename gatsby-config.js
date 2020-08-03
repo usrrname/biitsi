@@ -9,6 +9,21 @@ module.exports = {
     author: `Jen Chan`,
   },
   plugins: [
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 2000,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,12 +42,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `press`,
+        path: `${__dirname}/_press`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-json`,
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-cloudinary`,
       options: {
