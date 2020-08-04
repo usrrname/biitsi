@@ -4,7 +4,7 @@ dotenv.config({ path: ".env" })
 
 module.exports = {
   siteMetadata: {
-    title: `Bitsii`,
+    title: `Biitsi`,
     description: `Helsinki-based production duo Biitsi`,
     author: `Jen Chan`,
   },
