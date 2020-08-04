@@ -1,4 +1,4 @@
-import "./sidebar.module.scss"
+import sidebarStyles from "./sidebar.module.scss"
 import React, { useState, useEffect } from "react"
 import paperclip from "../images/paperclip.svg"
 export const Sidebar = ({ width, height, children }) => {
@@ -18,15 +18,14 @@ export const Sidebar = ({ width, height, children }) => {
   return (
     <>
       <aside
-        className="sidebar"
+        className={sidebarStyles.sidebar}
         style={{
           transform: `translatex(${xPosition}px)`,
           width: width,
           minHeight: height,
-          paddingLeft: 16,
         }}
       >
-        <div role="button" onClick={() => toggleMenu()} className="toggle-menu">
+        {/* <div role="button" onClick={() => toggleMenu()} className={sidebarStyles.toggleMenu}>
           <img
             src={paperclip}
             width={35}
@@ -35,11 +34,12 @@ export const Sidebar = ({ width, height, children }) => {
               transform: `translate(${width}px, 20vh)`,
             }}
           ></img>
-        </div>
-        <div className="content">{children}</div>
+        </div> */}
+        <div className={sidebarStyles.iconContainer}>
+          {children}
+          </div>
       </aside>
     </>
   )
 }
-
 export default Sidebar

@@ -9,7 +9,7 @@ media_library:
   name: cloudinary
   output_filename_only: true
   config:
-    cloud_name: bitsicloud
+    cloud_name: biitsicloud
     api_key: 167316888477451
     multiple: true
 media_folder: image/upload
@@ -24,7 +24,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     path: "{{slug}}/index"
     fields:
-      - label: Template
+      - label: Template Key
         name: templateKey
         widget: hidden
         default: project-post
@@ -62,7 +62,7 @@ collections:
       - label: Updated On
         name: date
         widget: datetime
-        dateFormat: MM.YYYY
+        dateFormat: MM.DD.YYYY
         format: L
         required: true
       - label: Description
@@ -89,20 +89,23 @@ collections:
         name: index
         create: true
         fields:
-          - label: Template
-            name: template
-            widget: hidden
+          - label: Title
+            name: title
+            widget: string
+            required: false
       - file: src/pages/press/index.md
         label: Press
         name: press
         fields:
-          - label: Template
-            name: template
-            widget: hidden
+          - label: Title
+            name: title
+            widget: string
+            required: false
       - file: src/pages/tags/index.md
         label: Tags
         name: tags
         fields:
-          - label: Template
-            name: template
-            widget: hidden
+          - label: Title
+            name: title
+            widget: string
+            required: false

@@ -1,5 +1,5 @@
 ---
-template: press-post
+templateKey: press-post
 title: LE COURATEUR
 description: >
   ## “Video jolla Juha Sipilä haluaa tappaa Suomen Serge Gainsbourgin on oiva

@@ -1,5 +1,5 @@
 ---
-template: press-post
+templateKey: press-post
 title: GRÂCE
 description: >
   ### “Impulsseja antavassa äänimaailmassa syntyy vapaata ja ilmavaa liikettä

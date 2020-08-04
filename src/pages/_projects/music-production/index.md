@@ -1,5 +1,5 @@
 ---
-template: project-post
+templateKey: project-post
 title: MUSIC PRODUCTION
 date: 05/01/2017
 description: >-

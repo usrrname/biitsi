@@ -12,6 +12,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             id
+            html
             fields {
               slug
             }
@@ -33,8 +34,9 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach(edge => {
+      const slug = edge.node.fields.slug
       createPage({
-        path: edge.node.fields.slug,
+        path: slug,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
@@ -42,6 +44,7 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id: edge.node.id,
+          slug: slug,
         },
       })
     })
@@ -91,6 +94,7 @@ const {
   newCloudinary,
   getResourceOptions,
 } = require("./src/util/cloudinary_util")
+const { node } = require("prop-types")
 const type = `cloudinaryMedia`
 
 const getNodeData = (gatsby, media) => {

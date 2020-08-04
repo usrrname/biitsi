@@ -8,24 +8,19 @@ class PressRoll extends Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div>
         {posts &&
           posts.map(({ node: post }) => (
             <div key={post.id}>
               <article>
                 <header>
-                  <p className="post-meta">
+                  <p>
                     <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
                     <span>{post.frontmatter.date}</span>
                   </p>
                 </header>
                 <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
+                  {post.description}
                 </p>
               </article>
             </div>
@@ -53,15 +48,15 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
               id
               fields {
                 slug
               }
               frontmatter {
-                templateKey
                 title
+                templateKey
                 date
+                description
               }
             }
           }

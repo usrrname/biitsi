@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { kebabCase } from "lodash"
 import { Helmet } from "react-helmet"
-import { graphql, Link } from "gatsby"
+import { graphql, Link, StaticQuery } from "gatsby"
 import Content, { HTMLContent } from "../components/Content"
 import Layout from "../components/Layout"
 
@@ -16,28 +16,25 @@ export const ProjectTemplate = ({
 }) => {
   const ProjectContent = contentComponent || Content
   return (
-    <section className="section">
+    <section>
       {helmet || ""}
       <div className="container content">
-        <div>
+        <h1>{title}</h1>
+        <article>{description}</article>
+        <div dangerouslySetInnerHTML={{ __html: HTMLContent }}></div>
+        <ProjectContent content={content} />
+        {tags && tags.length ? (
           <div>
-            <h1>{title}</h1>
-            <p>{description}</p>
-            <ProjectContent content={content} />
-            {tags && tags.length ? (
-              <div>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+            <h4>Tags</h4>
+            <ul className="taglist">
+              {tags.map(tag => (
+                <li key={tag + `tag`}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ) : null}
       </div>
     </section>
   )
@@ -52,25 +49,22 @@ ProjectTemplate.propTypes = {
 }
 
 const ProjectPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { content, frontmatter, contentComponent } = data.markdownRemark
 
   return (
     <Layout>
       <ProjectTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        title={frontmatter.title}
+        content={content}
+        contentComponent={contentComponent}
+        description={frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Project">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
+            <title>{`${frontmatter.title}`}</title>
+            <meta name="description" content={`${frontmatter.excerpt}`} />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
+        tags={frontmatter.tags}
       />
     </Layout>
   )
@@ -84,7 +78,7 @@ ProjectPost.propTypes = {
 
 export default ProjectPost
 
-export const projectQuery = graphql`
+export const data = graphql`
   query ProjectPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id

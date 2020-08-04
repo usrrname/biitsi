@@ -1,5 +1,5 @@
 ---
-template: press-post
+templateKey: press-post
 title: JUHA BIITSILLÄ
 description: >+
   ### “Sympaattiset kertomukset perheistä eivät ole kiillotettuja vaan eläviä ja

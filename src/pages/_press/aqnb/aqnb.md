@@ -1,5 +1,5 @@
 ---
-template: press-post
+templateKey: press-post
 title: AQNB
 description: >
   ## “'Biitsi's affectionate sampler for AQNB' (2017), A rock, nu-metal + cult

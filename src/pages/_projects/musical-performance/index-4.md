@@ -1,5 +1,5 @@
 ---
-template: project-post
+templateKey: project-post
 title: MUSICAL PERFORMANCE
 date: 08/01/2017
 description: >-

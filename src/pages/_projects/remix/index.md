@@ -1,5 +1,5 @@
 ---
-template: project-post
+templateKey: project-post
 title: Remix
 date: 12/01/2017
 description: >

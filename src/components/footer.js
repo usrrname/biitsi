@@ -1,15 +1,15 @@
 import React from "react"
-import "./footer.module.scss"
+import footerStyles from "./footer.module.scss"
+
 const Footer = props => {
   return (
-    <footer className="footer">
+    <footer className={footerStyles.footer}>
       <sub>
-        Built with
-        {` `}
+        Built with{" "}
         <a href="https://www.gatsbyjs.org" target="_blank" rel="noreferrer">
           Gatsby
         </a>{" "}
-        and{" "}
+        and
         <a href="https://www.netlifycms.org" target="_blank" rel="noreferrer">
           Netlify
         </a>

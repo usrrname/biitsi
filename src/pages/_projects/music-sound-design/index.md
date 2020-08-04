@@ -1,5 +1,5 @@
 ---
-template: project-post
+templateKey: project-post
 title: MUSIC & SOUND DESIGN
 date: 08/01/2017
 description: >

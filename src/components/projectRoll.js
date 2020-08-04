@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import { Link, graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 
 class ProjectRoll extends Component {
   render() {
@@ -11,24 +11,15 @@ class ProjectRoll extends Component {
       <div>
         {posts &&
           posts.map(({ node: post }) => (
-            <div key={post.id}>
-              <article>
-                <header>
-                  <p>
-                    <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-                    <span>{post.frontmatter.date}</span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
+            <section key={post.id}>
+              <h2>{post.frontmatter.title}</h2>
+              <p>{post.frontmatter.year}</p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: post.html,
+                }}
+              ></div>
+            </section>
           ))}
       </div>
     )
@@ -46,22 +37,23 @@ ProjectRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query ProjectRollQuery {
+      query PressRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "project-post" } } }
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
               id
+              html
               fields {
                 slug
               }
               frontmatter {
                 title
-                templateKey
+                year
                 date
+                description
               }
             }
           }

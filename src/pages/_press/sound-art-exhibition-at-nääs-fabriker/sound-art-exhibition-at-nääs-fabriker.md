@@ -1,5 +1,5 @@
 ---
-template: press-post
+templateKey: press-post
 title: SOUND ART EXHIBITION AT NÄÄS FABRIKER
 description: >
   ## “Jag hör ett meditativt ljudkonstverk av porlande vatten och mjuka
