@@ -7,4 +7,9 @@ description: |
 
   {{< youtube eQw4t99v_9s >}}
 year: 2017
+text: Rapper-poet Dxxxa D & Nukkehallitus’ album launch party, Bar Loose, Helsinki
+image:
+  - https://res.cloudinary.com/biitsicloud/image/upload/v1596108034/bcloud/15.jpg
+tags:
+  - MUSIC VIDEO
 ---
