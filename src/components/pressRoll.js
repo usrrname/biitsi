@@ -20,7 +20,7 @@ class PressRoll extends Component {
                   </p>
                 </header>
                 <p>
-                  {post.description}
+                  {post.text}
                 </p>
               </article>
             </div>
@@ -56,7 +56,7 @@ export default () => (
                 title
                 templateKey
                 date
-                description
+                text
               }
             }
           }

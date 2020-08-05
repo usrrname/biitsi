@@ -12,7 +12,9 @@ media_library:
     cloud_name: biitsicloud
     api_key: 167316888477451
     multiple: true
-public_folder: static
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: projects
@@ -20,7 +22,7 @@ collections:
     label_singular: "Project"
     folder: "src/pages/_projects"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     path: "{{slug}}/index"
     fields:
       - label: Template Key
@@ -36,12 +38,15 @@ collections:
         format: L
         required: true
       - label: Description
-        name: description
+        name: text
         widget: markdown
         required: false
       - label: Image
         name: image
-        widget: file
+        widget: image
+        required: false
+        media_library:
+          name: cloudinary
       - label: Tags
         name: tags
         widget: list
@@ -51,7 +56,7 @@ collections:
     label_singular: Press Article
     folder: src/pages/_press
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     path: "{{slug}}/index"
     fields:
       - label: Template Key
@@ -68,11 +73,14 @@ collections:
         format: L
         required: true
       - label: Description
-        name: description
+        name: text
         widget: markdown
       - label: Featured Image
-        name: featured image
+        name: image
+        required: false
         widget: image
+        media_library:
+          name: cloudinary
       - label: File
         name: file
         widget: file

@@ -56,11 +56,11 @@ const ProjectPost = ({ data }) => {
         title={frontmatter.title}
         content={content}
         contentComponent={contentComponent}
-        description={frontmatter.description}
+        description={frontmatter.text}
         helmet={
           <Helmet titleTemplate="%s | Project">
             <title>{`${frontmatter.title}`}</title>
-            <meta name="description" content={`${frontmatter.excerpt}`} />
+            <meta name="description" content={`${frontmatter.content}`} />
           </Helmet>
         }
         tags={frontmatter.tags}
@@ -86,7 +86,7 @@ export const data = graphql`
       frontmatter {
         title
         date
-        description
+        text
         tags
         year
       }

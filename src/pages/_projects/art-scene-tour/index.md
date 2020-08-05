@@ -2,7 +2,7 @@
 templateKey: project-post
 title: ART SCENE TOUR
 date: 12/01/2016
-description: Helsinki Sound Room LV, Third Space Gallery, Helsinki, 12/2016
+text: Helsinki Sound Room LV, Third Space Gallery, Helsinki, 12/2016
 tags:
   - ART SCENE TOUR
 year: 2016

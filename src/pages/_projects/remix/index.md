@@ -2,7 +2,7 @@
 templateKey: project-post
 title: Remix
 date: 12/01/2017
-description: >
+text: 
 
   {{< youtube Ko98onIyt24 >}}
 

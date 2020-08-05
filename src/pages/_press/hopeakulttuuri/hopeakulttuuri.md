@@ -1,7 +1,7 @@
 ---
 templateKey: press-post
 title: HOPEAKULTTUURI
-description: >
+text: 
   ### “Miten Suomen harmaantuminen vaikuttaa kulttuuritarjontaan, kysyy pätevä
   Hopeakulttuuri-ohjelma”
 

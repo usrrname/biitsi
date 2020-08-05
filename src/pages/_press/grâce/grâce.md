@@ -1,7 +1,7 @@
 ---
 templateKey: press-post
 title: GRÂCE
-description: >
+text: 
   ### “Impulsseja antavassa äänimaailmassa syntyy vapaata ja ilmavaa liikettä
   [...] Esityksen rakennetta rytmittää ja sisältöä määrittää Kim Modigin ja
   Heidi M Ween Biitsi-yhtyeen viisiosainen äänimaailma. En sano musiikki, sillä

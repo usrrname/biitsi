@@ -53,7 +53,8 @@ export default () => (
                 title
                 year
                 date
-                description
+                text
+                image
               }
             }
           }

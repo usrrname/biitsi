@@ -2,7 +2,7 @@
 date: 06/01/2016
 templateKey: project-post
 title: MUSICAL PERFORMANCE (BIITSI DEBUT)
-description: >-
+text: -
   at an event curated by Matti Nives for their Avantgardeyö radio show in Radio
   Helsinki, Oranssi, Helsinki, 6/2016
 

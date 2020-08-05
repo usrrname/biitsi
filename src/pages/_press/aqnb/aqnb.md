@@ -1,7 +1,7 @@
 ---
 templateKey: press-post
 title: AQNB
-description: >
+text: 
   ## “'Biitsi's affectionate sampler for AQNB' (2017), A rock, nu-metal + cult
   disco past into the beat-bereft dance music”
 

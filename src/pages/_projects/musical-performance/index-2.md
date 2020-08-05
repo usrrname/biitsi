@@ -2,7 +2,7 @@
 templateKey: project-post
 title: MUSICAL PERFORMANCE
 date: 03/01/2017
-description: >-
+text: -
   Visuals by Olli Leppänen, Semifinaali, Helsinki, 3/2017
 
 

@@ -2,7 +2,7 @@
 templateKey: project-post
 title: MUSICAL PERFORMANCE
 date: 01/01/2017
-description: >
+text: 
   Dxxxa D, Hzzzt and Minkki: 'Le Courateur', music video release party, Mascot,
   Helsinki, 2/2017
 

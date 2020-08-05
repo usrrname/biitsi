@@ -47,18 +47,18 @@ PressTemplate.propTypes = {
 }
 
 const PressPost = ({ data }) => {
-  const { content, frontmatter, contentComponent } = data.markdownRemark
+  const { content, frontmatter, contentComponent, text } = data.markdownRemark
 
   return (
     <Layout>
       <PressTemplate
         content={content}
         contentComponent={contentComponent}
-        description={frontmatter.description}
+        description={text}
         helmet={
           <Helmet titleTemplate="%s | Press">
             <title>{`${frontmatter.title}`}</title>
-            <meta name="description" content={`${frontmatter.description}`} />
+            <meta name="description" content={`${frontmatter.content}`} />
           </Helmet>
         }
         tags={frontmatter.tags}
@@ -83,8 +83,9 @@ export const data = graphql`
       html
       frontmatter {
         title
-        tags
         date
+        tags
+        image
       }
     }
   }

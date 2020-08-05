@@ -43,10 +43,10 @@ const Layout = ({ children }) => {
               </p>
             </article>
             <p>
-              <a className={layoutStyles.link}>
+              <div className={layoutStyles.link}>
                 <img src={email} width={25} alt="email icon" />{" "}
                 <span className="email">biitsiemail@gmail.com</span>
-              </a>
+              </div>
             </p>
 
             <div className="iconContainer">
