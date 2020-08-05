@@ -7,12 +7,11 @@ backend:
 # global
 media_library:
   name: cloudinary
-  output_filename_only: true
+  output_filename_only: false
   config:
     cloud_name: biitsicloud
     api_key: 167316888477451
     multiple: true
-media_folder: image/upload
 public_folder: static
 
 collections:
@@ -40,6 +39,9 @@ collections:
         name: description
         widget: markdown
         required: false
+      - label: Image
+        name: image
+        widget: file
       - label: Tags
         name: tags
         widget: list
@@ -68,6 +70,9 @@ collections:
       - label: Description
         name: description
         widget: markdown
+      - label: Featured Image
+        name: featured image
+        widget: image
       - label: File
         name: file
         widget: file

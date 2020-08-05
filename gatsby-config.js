@@ -17,6 +17,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -63,9 +64,18 @@ module.exports = {
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         resourceType: `image`,
         prefix: `bcloud/`,
+        maxResults: 40,
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms-paths`,
+    {
+      resolve: `gatsby-plugin-netlify-cms-paths`,
+      options: {
+        // Path to your Netlify CMS config file
+        cmsConfig: `/static/admin/config.yml`,
+      },
+    },
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {

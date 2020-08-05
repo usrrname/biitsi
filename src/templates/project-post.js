@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { kebabCase } from "lodash"
 import { Helmet } from "react-helmet"
-import { graphql, Link, StaticQuery } from "gatsby"
-import Content, { HTMLContent } from "../components/Content"
+import { graphql, Link } from "gatsby"
+import Content from "../components/Content"
 import Layout from "../components/Layout"
 
 export const ProjectTemplate = ({
@@ -21,7 +21,6 @@ export const ProjectTemplate = ({
       <div className="container content">
         <h1>{title}</h1>
         <article>{description}</article>
-        <div dangerouslySetInnerHTML={{ __html: HTMLContent }}></div>
         <ProjectContent content={content} />
         {tags && tags.length ? (
           <div>
@@ -49,7 +48,7 @@ ProjectTemplate.propTypes = {
 }
 
 const ProjectPost = ({ data }) => {
-  const { content, frontmatter, contentComponent } = data.markdownRemark
+  const { content, frontmatter, html, contentComponent } = data.markdownRemark
 
   return (
     <Layout>
@@ -66,6 +65,7 @@ const ProjectPost = ({ data }) => {
         }
         tags={frontmatter.tags}
       />
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Layout>
   )
 }

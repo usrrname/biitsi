@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import PressRoll from "../components/pressRoll"
 import SEO from "../components/seo"
 

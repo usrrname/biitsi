@@ -9,15 +9,16 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "./Header"
 import layoutStyles from "./layout.module.scss"
 
-import Footer from "./footer"
+import Footer from "./Footer"
 import email from "../images/social/email.svg"
 import facebook from "../images/social/facebook.svg"
 import instagram from "../images/social/instagram.svg"
 import soundcloud from "../images/social/soundcloud.png"
-import Sidebar from "../components/sidebar"
+import Sidebar from "./Sidebar"
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
