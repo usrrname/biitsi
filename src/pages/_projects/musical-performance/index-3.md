@@ -1,7 +1,7 @@
 ---
 templateKey: project-post
 title: MUSICAL PERFORMANCE
-text:
+text: |
   featuring visual artist Venla Martikainen, Veranda Festival, gallery Sorbus,
   Helsinki, 7/2017
 

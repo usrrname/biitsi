@@ -1,19 +1,15 @@
 ---
 templateKey: press-post
 title: HOPEAKULTTUURI
-text: 
+text: |
   ### “Miten Suomen harmaantuminen vaikuttaa kulttuuritarjontaan, kysyy pätevä
   Hopeakulttuuri-ohjelma”
 
 
   #### “Paljon tekijöiden omakohtaista pohdintaa sisältävä radiofeature heittelee pohdinnan arvoisia koukkuja.”
-
-
   Sampsa Oinaala, [Helsingin Sanomat](https://www.hs.fi/kulttuuri/art-2000006452371.html)
 
-
   —
-
 
   “Futuristisia tieteisfantasia-mielleyhtymiä tuottava äänimaailma”
 
@@ -25,7 +21,6 @@ text:
 
 
   Elissa Määttänen, [Kulttuuritoimitus](https://kulttuuritoimitus.fi/artikkelit/radio/hopeakulttuuri-miten-vanheneva-vaesto-muokkaa-taidetta-ja-yhteiskuntaa-tulevaisuuden-suomessa/?fbclid=IwAR0ZGsmgIsZQvwgsC_8q-aIPrmsgBVzfcfZJo0BRuww-FBvSwtAHJN2AEno)
-
 
   —
 
