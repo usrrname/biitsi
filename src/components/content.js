@@ -1,8 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { toHTML } from "../util/util"
 
 export const HTMLContent = ({ content, className }) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  <div
+    className={className}
+    dangerouslySetInnerHTML={{ __html: toHTML(content) }}
+  />
 )
 
 const Content = ({ content, className }) => (

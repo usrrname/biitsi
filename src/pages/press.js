@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/Layout"
-import PressRoll from "../components/pressRoll"
+import PressRoll from "../components/PressRoll"
 import SEO from "../components/seo"
 
 const Press = () => (
