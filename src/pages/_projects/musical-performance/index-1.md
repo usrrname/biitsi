@@ -10,6 +10,4 @@ text: |
 tags:
   - MUSICAL PERFORMANCE
 year: 2017
-text: |
-  Johanna Porola’s EP launch party, Barker theater, Turku
 ---

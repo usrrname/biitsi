@@ -84,6 +84,7 @@ export const data = graphql`
       frontmatter {
         title
         date
+        text
         tags
         image
       }

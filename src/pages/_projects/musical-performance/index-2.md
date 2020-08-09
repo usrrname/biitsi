@@ -9,8 +9,6 @@ text: |
 tags:
   - MUSICAL PERFORMANCE
 year: 2017
-text: |
-  Visuals by Olli Leppänen, Semifinaali, Helsinki.
 image:
   - https://res.cloudinary.com/biitsicloud/image/upload/v1596108035/bcloud/07A.jpg
 ---
