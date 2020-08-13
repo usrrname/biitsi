@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import { kebabCase } from "lodash"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
-import Content from "../components/Content"
-import Layout from "../components/Layout"
+import Content from "../components/content"
+import Layout from "../components/layout"
 export const PressTemplate = ({
   content,
   contentComponent,
