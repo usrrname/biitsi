@@ -29,5 +29,5 @@ text: |
 
 
   Pirjo-Liisa Niinimäki, [Aamulehti & Turun Sanomat](https://www.aamulehti.fi/a/2effc753-6a67-4b66-877d-9024592930c4)
-Date: 03/26/2020
+date: 03/26/2020
 ---

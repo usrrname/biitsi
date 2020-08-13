@@ -13,7 +13,7 @@ const Artwork = () => {
     }
   `)
   return (
-    <main>
+    <div>
       <div
         className="content"
         itemScope
@@ -26,7 +26,7 @@ const Artwork = () => {
           Year
         </time>
       </div>
-    </main>
+    </div>
   )
 }
 export default Artwork

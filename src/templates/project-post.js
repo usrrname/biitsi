@@ -48,24 +48,24 @@ ProjectTemplate.propTypes = {
 }
 
 const ProjectPost = ({ data }) => {
-  const { content, frontmatter, html, contentComponent } = data.markdownRemark
+  const post = data.markdownRemark
 
   return (
     <Layout>
       <ProjectTemplate
-        title={frontmatter.title}
-        content={content}
-        contentComponent={contentComponent}
-        description={frontmatter.text}
+        title={post.frontmatter.title}
+        content={post.content}
+        contentComponent={post.contentComponent}
+        description={post.frontmatter.text}
         helmet={
           <Helmet titleTemplate="%s | Project">
-            <title>{`${frontmatter.title}`}</title>
-            <meta name="description" content={`${frontmatter.content}`} />
+            <title>{`${post.frontmatter.title}`}</title>
+            <meta name="description" content={`${post.frontmatter.content}`} />
           </Helmet>
         }
-        tags={frontmatter.tags}
+        tags={post.frontmatter.tags}
       />
-      <div dangerouslySetInnerHTML={{ __html: html }}></div>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 }
@@ -87,6 +87,7 @@ export const data = graphql`
         title
         date
         text
+        image
         tags
         year
       }

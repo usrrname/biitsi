@@ -42,12 +42,12 @@ const Layout = ({ children }) => {
                 Ecstatic music and collaborations. Est. 2015, Helsinki, Finland.
               </p>
             </article>
-            <p>
+            <div>
               <div className={layoutStyles.link}>
                 <img src={email} width={25} alt="email icon" />{" "}
                 <span className="email">biitsiemail@gmail.com</span>
               </div>
-            </p>
+            </div>
 
             <div className="iconContainer">
               <div>

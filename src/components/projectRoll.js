@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
+import { Img } from "gatsby-image"
 
 class ProjectRoll extends Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
     return (
       <div>
         {posts &&
@@ -14,9 +14,10 @@ class ProjectRoll extends Component {
             <section key={post.id}>
               <h2>{post.frontmatter.title}</h2>
               <p>{post.frontmatter.year}</p>
+              <Img src={post.frontmatter.image} fluid />
               <div
                 dangerouslySetInnerHTML={{
-                  __html: post.html,
+                  __html: post.text,
                 }}
               ></div>
             </section>

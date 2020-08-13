@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
     `gatsby-remark-relative-images`,
+    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -22,6 +23,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1400,
+              linkImagesToOriginal: true,
             },
           },
         ],
