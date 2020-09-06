@@ -54,18 +54,20 @@ const ProjectPost = ({ data }) => {
     <Layout>
       <ProjectTemplate
         title={post.frontmatter.title}
-        content={post.content}
+        content={post.frontmatter.body}
         contentComponent={post.contentComponent}
         description={post.frontmatter.text}
         helmet={
           <Helmet titleTemplate="%s | Project">
             <title>{`${post.frontmatter.title}`}</title>
-            <meta name="description" content={`${post.frontmatter.content}`} />
+            <meta
+              name="description"
+              content={`${post.parent.internal.content}`}
+            />
           </Helmet>
         }
         tags={post.frontmatter.tags}
       />
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 }
@@ -86,10 +88,15 @@ export const data = graphql`
       frontmatter {
         title
         date
-        text
+        body
         image
         tags
         year
+      }
+      parent {
+        internal {
+          content
+        }
       }
     }
   }

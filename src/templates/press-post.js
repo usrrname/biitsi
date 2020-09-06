@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import Content from "../components/content"
 import Layout from "../components/layout"
+
 export const PressTemplate = ({
   content,
   contentComponent,
@@ -47,18 +48,18 @@ PressTemplate.propTypes = {
 }
 
 const PressPost = ({ data }) => {
-  const { content, frontmatter, contentComponent, text } = data.markdownRemark
+  const { frontmatter, contentComponent, excerpt } = data.markdownRemark
 
   return (
     <Layout>
       <PressTemplate
-        content={content}
+        content={frontmatter.body}
         contentComponent={contentComponent}
-        description={text}
+        description={excerpt}
         helmet={
           <Helmet titleTemplate="%s | Press">
             <title>{`${frontmatter.title}`}</title>
-            <meta name="description" content={`${frontmatter.content}`} />
+            <meta name="description" content={content} />
           </Helmet>
         }
         tags={frontmatter.tags}
@@ -81,12 +82,18 @@ export const data = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      excerpt
       frontmatter {
         title
         date
-        text
+        body
         tags
         image
+      }
+      parent {
+        internal {
+          content
+        }
       }
     }
   }

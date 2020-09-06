@@ -1,26 +1,10 @@
 import CMS from "netlify-cms-app"
 import cloudinary from "netlify-cms-media-library-cloudinary"
+import ProjectPreview from "./preview-templates/project-preview"
+import YouTube from "../components/youtube"
 
 CMS.registerMediaLibrary(cloudinary)
 
-CMS.registerEditorComponent({
-  id: "youtube",
-  label: "Youtube",
-  fields: [{ name: "id", label: "Youtube Video ID" }],
-  pattern: /^{{<\s?youtube (\S+)\s?>}}/,
-  fromBlock: match => {
-    return {
-      id: match[1],
-    }
-  },
-  toBlock: obj => {
-    return "{{< youtube " + obj.id + " >}}"
-  },
-  toPreview: obj => {
-    return (
-      '<img src="http://img.youtube.com/vi/' +
-      obj.id +
-      '/maxresdefault.jpg" alt="Youtube Video"/>'
-    )
-  },
-})
+CMS.registerEditorComponent(YouTube)
+
+CMS.registerPreviewTemplate("project", ProjectPreview)

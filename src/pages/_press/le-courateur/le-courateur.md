@@ -1,7 +1,7 @@
 ---
 templateKey: press-post
 title: LE COURATEUR
-text: |
+body:  |
   ## “Video jolla Juha Sipilä haluaa tappaa Suomen Serge Gainsbourgin on oiva
   vertauskuva yhteiskuntamme rakenteista”
 

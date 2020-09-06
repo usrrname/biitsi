@@ -1,7 +1,7 @@
 ---
 templateKey: press-post
 title: AQNB
-text: |
+body:  |
   ## “'Biitsi's affectionate sampler for AQNB' (2017), A rock, nu-metal + cult disco past into the beat-bereft dance music”
   [AQNB](https://www.aqnb.com/2017/09/22/a-rock-nu-metal-cult-disco-past-into-the-beat-bereft-dance-music-biitsis-affectionate-sampler-for-aqnb/), 22.9.2017
 

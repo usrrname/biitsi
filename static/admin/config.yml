@@ -15,7 +15,6 @@ media_library:
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
-
 collections:
   - name: projects
     label: Projects
@@ -38,7 +37,7 @@ collections:
         format: L
         required: true
       - label: Description
-        name: text
+        name: body
         widget: markdown
         required: false
       - label: Image
@@ -73,7 +72,7 @@ collections:
         format: L
         required: true
       - label: Description
-        name: text
+        name: body
         widget: markdown
       - label: Featured Image
         name: image

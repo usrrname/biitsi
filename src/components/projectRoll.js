@@ -14,10 +14,10 @@ class ProjectRoll extends Component {
             <section key={post.id}>
               <h2>{post.frontmatter.title}</h2>
               <p>{post.frontmatter.year}</p>
-              <Img src={post.frontmatter.image} fluid />
+              <Img fluid={post.frontmatter.image} alt={post.image.title} />
               <div
                 dangerouslySetInnerHTML={{
-                  __html: post.text,
+                  __html: post.frontmatter.body,
                 }}
               ></div>
             </section>
@@ -38,7 +38,7 @@ ProjectRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query PressRollQuery {
+      query ProjectRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "project-post" } } }
@@ -54,7 +54,7 @@ export default () => (
                 title
                 year
                 date
-                text
+                body
                 image
               }
             }

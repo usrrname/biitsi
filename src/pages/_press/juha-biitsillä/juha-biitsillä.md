@@ -1,7 +1,7 @@
 ---
 templateKey: press-post
 title: JUHA BIITSILLÄ
-text: |
+body:  |
   ### “Sympaattiset kertomukset perheistä eivät ole kiillotettuja vaan eläviä ja
   autenttisen tuntuisia. Niiden mukana on helppo liukua omaan lapsuudenkotiin
   [...] Biitsin särähtelevän futuurinen äänimaisema luo tarinoille unenomaisen

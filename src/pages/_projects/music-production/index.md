@@ -5,7 +5,7 @@ date: 05/01/2017
 tags:
   - MUSIC PRODUCTION
 year: 2017
-text: >-
+body:  >-
   'Anlatamiyorum' (feat. Biitsi & Zuzu Zakaria), for Pykäri’s debut album
 
 

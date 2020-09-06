@@ -8,7 +8,7 @@ export const format_cloudinary_url = filename =>
 
 /**
  * transforms a markdown into html
- * @param {string} filename
+ * @param {string} value
  */
 export const toHTML = value =>
   remark().use(remarkHTML).processSync(value).toString()

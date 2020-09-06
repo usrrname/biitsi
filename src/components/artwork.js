@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Artwork = () => {
+const Artwork = data => {
   const image = useStaticQuery(graphql`
     {
       cloudinaryMedia {
@@ -20,7 +20,10 @@ const Artwork = () => {
         itemprop="workExample"
         itemType="https://schema.org/exampleOfWork"
       >
-        <Img src={image.secure_url} width={image.width} />
+        <Img
+          fluid={data.markdownRemark.frontmatter.image.childImageSharp.fluid}
+          alt={data.markdownRemark.frontmatter.title}
+        />
         <p itemprop="name">Title</p>
         <time itemprop="datePublished" date={date}>
           Year

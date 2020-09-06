@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
-
+import { toHTML } from "../util/util"
 class PressRoll extends Component {
   render() {
     const { data } = this.props
@@ -19,9 +19,11 @@ class PressRoll extends Component {
                     <span>{post.frontmatter.date}</span>
                   </p>
                 </header>
-                <p>
-                  {post.text}
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: toHTML(post.frontmatter.body),
+                  }}
+                ></p>
               </article>
             </div>
           ))}
@@ -41,9 +43,8 @@ PressRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query ProjectRollQuery {
+      query PressRollQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "press-post" } } }
         ) {
           edges {
@@ -56,7 +57,7 @@ export default () => (
                 title
                 templateKey
                 date
-                text
+                body
               }
             }
           }

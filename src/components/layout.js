@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={layoutStyles.container}>
         <main className={layoutStyles.content}>
-          <Sidebar width={"100vw"} height={"30vh"}>
+          <Sidebar width={250} height={"100vh"} className="sidebar">
             <article>
               <p>
                 Ecstatic music and collaborations. Est. 2015, Helsinki, Finland.
