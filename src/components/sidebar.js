@@ -20,12 +20,16 @@ export const Sidebar = ({ width, height, children }) => {
       <aside
         className={sidebarStyles.sidebar}
         style={{
-          transform: `translatex(${xPosition}px)`,
+          transform: `translatex(${xPosition * 2}px)`,
           width: width,
-          minHeight: height,
+          height: height,
         }}
       >
-        {/* <div role="button" onClick={() => toggleMenu()} className={sidebarStyles.toggleMenu}>
+        <div
+          role="button"
+          onClick={() => toggleMenu()}
+          className={sidebarStyles.toggleMenu}
+        >
           <img
             src={paperclip}
             width={35}
@@ -34,10 +38,8 @@ export const Sidebar = ({ width, height, children }) => {
               transform: `translate(${width}px, 20vh)`,
             }}
           ></img>
-        </div> */}
-        <div className={sidebarStyles.iconContainer}>
-          {children}
-          </div>
+        </div>
+        <div className={sidebarStyles.iconContainer}>{children}</div>
       </aside>
     </>
   )
