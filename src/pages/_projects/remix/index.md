@@ -13,4 +13,4 @@ Was made for the Helsinki based Running duo in 2017, whose debut album ‘YUO’
 
 **[Music Video](https://www.youtube.com/watch?v=Ko98onIyt24)**
 
-{{< youtube Ko98onIyt24 >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ko98onIyt24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
