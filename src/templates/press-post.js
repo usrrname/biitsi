@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { kebabCase } from "lodash"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
-import Content from "../components/content"
+import HTMLContent from "../components/content"
 import Layout from "../components/layout"
 
 export const PressTemplate = ({
@@ -13,7 +13,7 @@ export const PressTemplate = ({
   title,
   helmet,
 }) => {
-  const PressContent = contentComponent || Content
+  const PressContent = contentComponent || HTMLContent
   return (
     <section className="section">
       {helmet || ""}
@@ -48,18 +48,18 @@ PressTemplate.propTypes = {
 }
 
 const PressPost = ({ data }) => {
-  const { frontmatter, contentComponent, excerpt } = data.markdownRemark
+  const { html, frontmatter, contentComponent, excerpt } = data.markdownRemark
 
   return (
     <Layout>
       <PressTemplate
-        content={frontmatter.body}
+        content={html}
         contentComponent={contentComponent}
         description={excerpt}
         helmet={
           <Helmet titleTemplate="%s | Press">
             <title>{`${frontmatter.title}`}</title>
-            <meta name="description" content={content} />
+            <meta name="description" content={excerpt} />
           </Helmet>
         }
         tags={frontmatter.tags}

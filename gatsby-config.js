@@ -9,11 +9,6 @@ module.exports = {
     author: `Jen Chan`,
   },
   plugins: [
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-json`,
-    `gatsby-plugin-sharp`,
-    `gatsby-remark-relative-images`,
-    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -27,6 +22,14 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [],
       },
     },
     `gatsby-plugin-react-helmet`,

@@ -16,14 +16,15 @@ class PressRoll extends Component {
                 <header>
                   <p>
                     <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+                    &nbsp;
                     <span>{post.frontmatter.date}</span>
                   </p>
                 </header>
-                <p
+                <div
                   dangerouslySetInnerHTML={{
-                    __html: toHTML(post.frontmatter.body),
+                    __html: post.html,
                   }}
-                ></p>
+                ></div>
               </article>
             </div>
           ))}
@@ -50,6 +51,7 @@ export default () => (
           edges {
             node {
               id
+              html
               fields {
                 slug
               }

@@ -1,23 +1,22 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
-import { Img } from "gatsby-image"
-
 class ProjectRoll extends Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     return (
-      <div>
+      <div className="aside">
         {posts &&
           posts.map(({ node: post }) => (
             <section key={post.id}>
               <h2>{post.frontmatter.title}</h2>
               <p>{post.frontmatter.year}</p>
-              <Img fluid={post.frontmatter.image} alt={post.image.title} />
+              <p>{post.frontmatter.body}</p>
+              <img src={post.frontmatter.image} />
               <div
                 dangerouslySetInnerHTML={{
-                  __html: post.frontmatter.body,
+                  __html: post.html,
                 }}
               ></div>
             </section>

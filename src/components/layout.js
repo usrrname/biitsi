@@ -8,10 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import { Helmet } from "react-helmet"
+import { withPrefix } from "gatsby"
 import Header from "./header"
 import layoutStyles from "./layout.module.scss"
-
+import sidebarStyles from "./sidebar.module.scss"
 import Footer from "./footer"
 import email from "../images/social/email.svg"
 import facebook from "../images/social/facebook.svg"
@@ -33,20 +34,59 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <html lang="en" />
+        <title>{data.site.siteMetadata.title}</title>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href={`${withPrefix("/")}img/apple-touch-icon.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href={`${withPrefix("/")}img/favicon-32x32.png`}
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href={`${withPrefix("/")}img/favicon-16x16.png`}
+          sizes="16x16"
+        />
+
+        <link
+          rel="mask-icon"
+          href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
+          color="#ff4400"
+        />
+        <meta name="theme-color" content="#fff" />
+
+        <meta property="og:type" content="business.business" />
+        <meta property="og:title" content={data.site.siteMetadata.title} />
+        <meta property="og:url" content="/" />
+        <meta
+          property="og:image"
+          content={`${withPrefix("/")}img/og-image.jpg`}
+        />
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={layoutStyles.container}>
-        <main className={layoutStyles.content}>
-          <Sidebar width={250} height={"100vh"} className="sidebar">
-            <article>
-              <p>
-                Ecstatic music and collaborations. Est. 2015, Helsinki, Finland.
-              </p>
-            </article>
+        <div className={layoutStyles.content}>
+          <Sidebar
+            width={200}
+            height={"100vh"}
+            className={sidebarStyles.sidebar}
+          >
+            <p>
+              Ecstatic music and collaborations.
+              <br />
+              Est. 2015, Helsinki, Finland.
+            </p>
+
             <div>
-              <div className={layoutStyles.link}>
-                <img src={email} width={25} alt="email icon" />{" "}
-                <span className="email">biitsiemail@gmail.com</span>
-              </div>
+              <img src={email} width={15} alt="email icon" />
+              &nbsp;<code className="email">biitsiemail@gmail.com</code>
             </div>
 
             <div className="iconContainer">
@@ -70,9 +110,8 @@ const Layout = ({ children }) => {
               </div>
             </div>
           </Sidebar>
-
-          {children}
-        </main>
+          <div className={layoutStyles.children}>{children}</div>
+        </div>
       </div>
       <Footer author={data.site.siteMetadata.author} />
     </>

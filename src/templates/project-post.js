@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { kebabCase } from "lodash"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
-import Content from "../components/content"
+import HTMLContent from "../components/content"
 import Layout from "../components/layout"
 
 export const ProjectTemplate = ({
@@ -14,11 +14,11 @@ export const ProjectTemplate = ({
   title,
   helmet,
 }) => {
-  const ProjectContent = contentComponent || Content
+  const ProjectContent = contentComponent || HTMLContent
   return (
-    <section>
+    <section className="container content">
       {helmet || ""}
-      <div className="container content">
+      <div>
         <h1>{title}</h1>
         <article>{description}</article>
         <ProjectContent content={content} />
@@ -54,9 +54,9 @@ const ProjectPost = ({ data }) => {
     <Layout>
       <ProjectTemplate
         title={post.frontmatter.title}
-        content={post.frontmatter.body}
+        content={post.html}
         contentComponent={post.contentComponent}
-        description={post.frontmatter.text}
+        description={post.frontmatter.body}
         helmet={
           <Helmet titleTemplate="%s | Project">
             <title>{`${post.frontmatter.title}`}</title>

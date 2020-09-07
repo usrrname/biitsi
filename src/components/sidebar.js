@@ -20,13 +20,14 @@ export const Sidebar = ({ width, height, children }) => {
       <aside
         className={sidebarStyles.sidebar}
         style={{
-          transform: `translatex(${xPosition * 2}px)`,
+          transform: `translateX(${xPosition}px)`,
           width: width,
           height: height,
         }}
       >
         <div
           role="button"
+          tabIndex="0"
           onClick={() => toggleMenu()}
           className={sidebarStyles.toggleMenu}
         >
