@@ -1,6 +1,8 @@
+@import "../styles/styles.scss";
+
 .footer {
+  display: flex;
+  position: fixed;
   margin: 2rem;
-  top: 95%;
   bottom: 0;
-  position: static;
 }

@@ -8,7 +8,7 @@ export const Sidebar = ({ width, height, children }) => {
     if (xPosition < 0) {
       setX(0)
     } else {
-      setX(-width)
+      setX(-width * 1.25)
     }
   }
 

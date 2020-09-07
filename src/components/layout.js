@@ -13,7 +13,10 @@ import { withPrefix } from "gatsby"
 import Header from "./header"
 import layoutStyles from "./layout.module.scss"
 import sidebarStyles from "./sidebar.module.scss"
+
 import Footer from "./footer"
+import footerStyles from "./footer.module.scss"
+
 import email from "../images/social/email.svg"
 import facebook from "../images/social/facebook.svg"
 import instagram from "../images/social/instagram.svg"
@@ -78,15 +81,20 @@ const Layout = ({ children }) => {
             height={"100vh"}
             className={sidebarStyles.sidebar}
           >
-            <p>
+            <p style={{ fontSize: `small` }}>
               Ecstatic music and collaborations.
               <br />
               Est. 2015, Helsinki, Finland.
             </p>
 
-            <div>
-              <img src={email} width={15} alt="email icon" />
-              &nbsp;<code className="email">biitsiemail@gmail.com</code>
+            <div style={{ justifyContent: `flex-start`, marginBottom: `2rem` }}>
+              <img
+                src={email}
+                width={20}
+                alt="email icon"
+                style={{ display: `inline` }}
+              />
+              <sup style={{ fontSize: `0.8rem` }}>biitsiemail@gmail.com</sup>
             </div>
 
             <div className="iconContainer">
@@ -113,7 +121,10 @@ const Layout = ({ children }) => {
           <div className={layoutStyles.children}>{children}</div>
         </div>
       </div>
-      <Footer author={data.site.siteMetadata.author} />
+      <Footer
+        className={footerStyles.footer}
+        author={data.site.siteMetadata.author}
+      />
     </>
   )
 }

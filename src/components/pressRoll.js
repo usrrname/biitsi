@@ -67,6 +67,7 @@ export default () => (
     query={graphql`
       query PressRollQuery {
         allMarkdownRemark(
+          sort: { order: DESC, fields: frontmatter___date }
           filter: { frontmatter: { templateKey: { eq: "press-post" } } }
         ) {
           edges {

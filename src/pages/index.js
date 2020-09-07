@@ -3,17 +3,17 @@ import "../styles/styles.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectRoll from "../components/projectRoll"
-
+import Footer from "../components/footer"
 const IndexPage = () => (
   <>
     <Layout>
       <SEO title="Projects" />
       <section className="section">
-      <div className="container">
-        <div className="content">
-      <ProjectRoll />
-      </div>
-      </div>
+        <div className="container">
+          <div className="content">
+            <ProjectRoll />
+          </div>
+        </div>
       </section>
     </Layout>
   </>
