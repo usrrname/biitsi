@@ -6,7 +6,7 @@ class ProjectRoll extends Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     return (
-      <div className="aside">
+      <div className="container">
         {posts &&
           posts.map(({ node: post }) => (
             <section key={post.id}>
@@ -53,7 +53,6 @@ export default () => (
                 title
                 year
                 date
-                body
                 image
               }
             }

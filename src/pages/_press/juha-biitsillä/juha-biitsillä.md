@@ -1,8 +1,9 @@
 ---
 templateKey: press-post
 title: JUHA BIITSILLÄ
-body:  |
-  ### “Sympaattiset kertomukset perheistä eivät ole kiillotettuja vaan eläviä ja
+date: 01/15/2020
+---
+### “Sympaattiset kertomukset perheistä eivät ole kiillotettuja vaan eläviä ja
   autenttisen tuntuisia. Niiden mukana on helppo liukua omaan lapsuudenkotiin
   [...] Biitsin särähtelevän futuurinen äänimaisema luo tarinoille unenomaisen
   tunnelman.”
@@ -28,6 +29,3 @@ body:  |
 
 
   Mikko Elo, [Satakunnan kansa](https://www.satakunnankansa.fi/kulttuuri/lainsuojattomat-arvio-juha-biitsilla-vyoryy-haikailematta-paalle-mutta-on-silti-sympaattinen-kertoessaan-pojan-ja-isan-hankalasta-suhteesta-201170764) 5.9.2018
-
-date: 01/15/2020
----

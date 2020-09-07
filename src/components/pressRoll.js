@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
-import { toHTML } from "../util/util"
+
 class PressRoll extends Component {
   render() {
     const { data } = this.props
@@ -59,7 +59,6 @@ export default () => (
                 title
                 templateKey
                 date
-                body
               }
             }
           }

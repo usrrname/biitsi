@@ -86,7 +86,6 @@ export const data = graphql`
       frontmatter {
         title
         date
-        body
         tags
         image
       }

@@ -56,7 +56,7 @@ const ProjectPost = ({ data }) => {
         title={post.frontmatter.title}
         content={post.html}
         contentComponent={post.contentComponent}
-        description={post.frontmatter.body}
+        description={post.excerpt}
         helmet={
           <Helmet titleTemplate="%s | Project">
             <title>{`${post.frontmatter.title}`}</title>
@@ -88,7 +88,6 @@ export const data = graphql`
       frontmatter {
         title
         date
-        body
         image
         tags
         year
