@@ -6,13 +6,17 @@ class ProjectRoll extends Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     return (
-      <div className="container">
+      <div>
         {posts &&
           posts.map(({ node: post }) => (
-            <section key={post.id}>
+            <section
+              key={post.id}
+              style={{
+                marginBottom: `3rem`,
+              }}
+            >
               <h2>{post.frontmatter.title}</h2>
               <p>{post.frontmatter.year}</p>
-              <p>{post.frontmatter.body}</p>
               <img src={post.frontmatter.image} />
               <div
                 dangerouslySetInnerHTML={{

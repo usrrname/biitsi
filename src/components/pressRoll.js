@@ -11,20 +11,41 @@ class PressRoll extends Component {
       <div>
         {posts &&
           posts.map(({ node: post }) => (
-            <div key={post.id}>
+            <div
+              key={post.id}
+              style={{
+                marginRight: `25vw`,
+                marginBottom: `3rem`,
+              }}
+            >
               <article>
                 <header>
-                  <p>
-                    <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+                  <h4 style={{ color: `var(--periwinkle)` }}>
+                    {post.frontmatter.title}
                     &nbsp;
                     <span>{post.frontmatter.date}</span>
-                  </p>
+                  </h4>
                 </header>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: post.html,
                   }}
                 ></div>
+                <Link
+                  to={post.fields.slug}
+                  style={{
+                    color: `var(--treshaute)`,
+                    backgroundColor: `var(--blush)`,
+                  }}
+                >
+                  <h4
+                    style={{
+                      textAlign: `right`,
+                    }}
+                  >
+                    Read More &#128214;
+                  </h4>
+                </Link>
               </article>
             </div>
           ))}
