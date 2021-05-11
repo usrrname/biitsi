@@ -1,7 +1,7 @@
 ---
 templateKey: project-post
 title: SILVER EPOCH
-date: 05/09/2021
+date: 05/11/2021
 image:
   - https://res.cloudinary.com/biitsicloud/image/upload/c_scale,w_500/v1596108033/bcloud/36C.jpg
 tags:
