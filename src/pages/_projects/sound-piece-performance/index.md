@@ -9,6 +9,6 @@ tags:
 ---
 \[one day, this will become a list of past works]
 
-![](https://res.cloudinary.com/biitsicloud/image/upload/v1596108033/bcloud/36C.jpg)
+![](https://res.cloudinary.com/biitsicloud/image/upload/c_scale,w_500/v1620555940/ekstra/19_pic_by_Biitsi_shamppi_amocc2.jpg)
 
-![](https://res.cloudinary.com/biitsicloud/image/upload/v1596108035/bcloud/13.jpg "Kaino and Heidi lying down")
+![](https://res.cloudinary.com/biitsicloud/image/upload/c_scale,w_500/v1596108033/bcloud/10.jpg "Kaino and Heidi lying down")
