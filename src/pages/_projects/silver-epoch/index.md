@@ -4,6 +4,8 @@ title: SILVER EPOCH
 date: 05/09/2021
 image:
   - https://res.cloudinary.com/biitsicloud/image/upload/c_scale,w_500/v1596108033/bcloud/36C.jpg
+tags:
+  - "#silverepoch #audio"
 ---
 A series of works in which we ask questions about aging in capitalist societies.  Who has the energy to live a so-called third life; who will even make it? What does desire in old age look like? Whose aging are we talking about?
 
