@@ -1,8 +1,13 @@
 @import "../styles/styles.scss";
 
 .footer {
+  a {
+    color: rgb(90, 89, 89);
+  }
   display: flex;
+  z-index: 5;
+  width: 100vw;
   position: fixed;
-  margin: 2rem;
+  padding: 1.15rem 1rem;
   bottom: 0;
 }

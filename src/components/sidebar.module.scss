@@ -1,22 +1,11 @@
 @import "../styles/styles.scss";
+
 .sidebar {
   flex-basis: column nowrap;
   background-color: transparent;
   position: fixed;
-  transition: 0.8s ease;
-  .toggleMenu {
-    height: inherit;
-    border-left: 0;
-    margin-left: 2em;
-    width: 7rem;
-    position: absolute;
-    outline: none;
-  }
   .iconContainer {
     flex-flow: row wrap;
-    div {
-      display: block;
-    }
     img {
       margin: 0rem 0.25rem;
       align-items: center;

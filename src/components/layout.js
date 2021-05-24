@@ -112,7 +112,7 @@ const Layout = ({ children }) => {
                 </a>
               </div>
               <div>
-                <a rel="noopener" href="https://www.instagram.com/biitsiband/">
+                <a rel="noopener" href="https://www.instagram.com/biitsi_duo/">
                   <img src={instagram} width={25} alt="instagram icon" />
                 </a>
               </div>

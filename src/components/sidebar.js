@@ -1,45 +1,16 @@
 import sidebarStyles from "./sidebar.module.scss"
-import React, { useState, useEffect } from "react"
-import paperclip from "../images/paperclip.svg"
+import React from "react"
+
 export const Sidebar = ({ width, height, children }) => {
-  const [xPosition, setX] = useState(-width)
-
-  const toggleMenu = () => {
-    if (xPosition < 0) {
-      setX(0)
-    } else {
-      setX(-width * 1.25)
-    }
-  }
-
-  useEffect(() => {
-    setX(0)
-  }, [])
   return (
     <>
       <aside
         className={sidebarStyles.sidebar}
         style={{
-          transform: `translateX(${xPosition}px)`,
           width: width,
-          height: height,
+          height: height
         }}
       >
-        <div
-          role="button"
-          tabIndex="0"
-          onClick={() => toggleMenu()}
-          className={sidebarStyles.toggleMenu}
-        >
-          <img
-            src={paperclip}
-            width={35}
-            alt="paper clip"
-            style={{
-              transform: `translate(${width}px, 20vh)`,
-            }}
-          ></img>
-        </div>
         <div className={sidebarStyles.iconContainer}>{children}</div>
       </aside>
     </>
