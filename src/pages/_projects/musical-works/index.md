@@ -5,7 +5,7 @@ date: 02/27/2023
 image:
   - https://res.cloudinary.com/biitsicloud/image/upload/v1596108033/bcloud/19.jpg
 tags:
-  - music
+  - ""
 ---
 Biitsi has made a lot of music for choreographic works, performances, and installations. All the music we've performed in our live performances remains unpublished. 
 
