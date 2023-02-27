@@ -1,7 +1,7 @@
 ---
 templateKey: project-post
 title: SILVER MEDAL AT HELSINKI CITY THEATER
-date: 07/26/2022
+date: 02/27/2023
 image:
   - https://res.cloudinary.com/biitsicloud/image/upload/v1677425486/hkt/hands_guiosh.jpg
   - https://res.cloudinary.com/biitsicloud/image/upload/v1677425532/hkt/maljakko_rgbquy.jpg
