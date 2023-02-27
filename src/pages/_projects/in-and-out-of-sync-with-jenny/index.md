@@ -1,7 +1,7 @@
 ---
 templateKey: project-post
 title: IN AND OUT OF SYNC WITH JENNY
-date: 02/26/2023
+date: 02/27/2023
 image:
   - https://res.cloudinary.com/biitsicloud/image/upload/v1677424105/bcloud/flim_still_Jenny_yhlamo.png
 tags:
